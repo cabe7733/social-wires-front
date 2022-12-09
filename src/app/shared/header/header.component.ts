@@ -6,10 +6,10 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./header.component.scss']
 })
 export class HeaderComponent implements OnInit {
-  isList: number;
+  isList: boolean;
   isMenu: boolean = false;
   isSearch: boolean = false;
-
+  subList = 3;
   constructor() { }
 
   ngOnInit(): void {

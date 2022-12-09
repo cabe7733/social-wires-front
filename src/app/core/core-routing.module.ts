@@ -19,6 +19,11 @@ const routes: Routes = [
       {
         path: 'all-messages',
         component: AllMessagesComponent
+      },
+      {
+        path: '',
+        redirectTo: 'core/create-messages',
+        pathMatch: 'full'
       }
     ]
   }

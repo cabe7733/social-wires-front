@@ -1,9 +1,55 @@
-<nav class="relative w-full flex flex-wrap items-center justify-between py-4 bg-gray-800 xl:block shadow text-gray-500 hover:text-gray-700 focus:text-gray-700 shadow-lg">
-    <div class="container-fluid w-full flex flex-wrap items-center justify-between px-6">
-        <div class="container-fluid">
-            <a class="flex items-center text-gray-900 hover:text-gray-900 focus:text-gray-900 mt-2 lg:mt-0 mr-1" href="#">
-                <img src="https://mdbootstrap.com/img/logo/mdb-transaprent-noshadows.png" style="height: 20px" alt="" loading="lazy" />
-            </a>
+<nav class="w-full mx-auto hidden xl:block bg-gray-800 shadow">
+    <div class="container px-6 justify-between h-16 flex items-center lg:items-stretch mx-auto">
+        <div class="h-full flex items-center w-full">
+            <div class="mr-10 flex items-center">
+                <h3 class="text-base text-yellow-200 font-bold tracking-normal leading-tight ml-3 hidden lg:block">Wires
+                </h3>
+            </div>
+            <ul class="pr-12 xl:flex items-center h-full hidden ml-auto">
+                <li [routerLink]="'create-messages'" [routerLinkActive]="'border-b-2 border-white'" class="cursor-pointer h-full flex items-center hover:text-indigo-700 text-sm text-white tracking-normal">
+                    create messages</li>
+                <li [routerLink]="'my-messages'" [routerLinkActive]="'border-b-2 border-white'" class="cursor-pointer h-full flex items-center hover:text-indigo-700 text-sm text-white mx-10 tracking-normal">
+                    my messages</li>
+                <li [routerLink]="'all-messages'" [routerLinkActive]="'border-b-2 border-white'" class="cursor-pointer h-full flex items-center hover:text-indigo-700 text-sm text-white mr-10 tracking-normal">
+                    all messages</li>
+            </ul>
+        </div>
+    </div>
+</nav>
+<!-- Navbar -->
+<nav>
+    <div class="py-4 px-6 w-full flex xl:hidden justify-around items-center bg-gray-800 fixed top-0 z-40">
+        <div class="w-24">
+            <h3 class="text-base text-yellow-200 font-bold tracking-normal leading-tight ml-3 hidden lg:block">Wires
+            </h3>
+        </div>
+        <div>
+            <div id="menu" class="text-white">
+                <div>
+                    <div (click)="isList = !isList" class="w-10 h-10 flex justify-content-center align-items-center shadow rounded-full hover:bg-yellow-200 hover:text-gray-900 text-sm font-medium leading-none text-gray-100 cursor-pointer" onclick="dropdownHandler()">
+                        <div class="flex justify-content-center align-items-center">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
+                              </svg>
+                        </div>
+                    </div>
+                    <div *ngIf="isList" class="w-auto mt-3 mr-8 p-4 bg-gray-800 shadow rounded absolute" id="dropdown">
+                        <ul class="pr-12 xl:flex items-center h-full ml-auto">
+                            <li [routerLink]="'create-messages'" [routerLinkActive]="'border-b-2 border-yellow-200'" class="cursor-pointer h-full mt-2 flex items-center hover:text-yellow-500 text-sm  tracking-normal">
+                                create messages</li>
+                            <li [routerLink]="'my-messages'" [routerLinkActive]="'border-b-2 border-yellow-200'" class="cursor-pointer h-full mt-2 flex items-center hover:text-yellow-500 text-sm tracking-normal">
+                                my messages</li>
+                            <li [routerLink]="'all-messages'" [routerLinkActive]="'border-b-2 border-yellow-200'" class="cursor-pointer h-full mt-2 flex items-center hover:text-yellow-500 text-sm tracking-normal">
+                                all messages</li>
+                        </ul>
+                    </div>
+                </div>
+                <style>
+                    .checkbox:checked+.check-icon {
+                        display: flex;
+                    }
+                </style>
+            </div>
         </div>
     </div>
 </nav>
