@@ -9,25 +9,43 @@
         <div class="bg-gradient-to-t from-black to-slate-500 shadow rounded lg:w-1/3 md:w-1/2 w-full p-2">
             <h2 class="font-semibold text-white text-center text-3xl">Welcome To Wires</h2>
         </div>
-        <form class="bg-white shadow rounded lg:w-1/3 md:w-1/2 w-full p-10">
+        <form class="bg-white shadow rounded lg:w-1/3 md:w-1/2 w-full p-10" [formGroup]="register" (ngSubmit)="onRegister()">
             <hr class="w-full bg-gray-400" />
-            <h4 class="text-center py-7 text-xl font-semibold text-yellow-200 cursor-pointer" (click)="redirectoLogin()">Sign up</h4>
+            <h4 class="text-center py-7 text-xl font-semibold text-yellow-200 cursor-pointer" (click)="redirectoLogin()">Sign In</h4>
             <div class="mt-6">
                 <div class="text-sm font-medium leading-none text-yellow-200"> Nickname </div>
-                <input aria-label="enter email adress" role="input" type="text" class="bg-gray-50 rounded-full text-xs font-medium leading-none text-gray-800 py-3 w-full pl-3 mt-2" />
+                <input formControlName="user_name" aria-label="enter email adress" role="input" type="text" class="bg-gray-50 rounded-full text-xs font-medium leading-none text-gray-800 py-3 w-full pl-3 mt-2" />
+                <div *ngIf="user_name?.invalid && (user_name?.dirty || user_name?.touched)" class=" text-center py-2 lg:px-4">
+                    <div class="p-2 text-sm text-red-700 bg-red-100 rounded-full dark:bg-red-200 dark:text-red-800" role="alert" *ngIf="user_name?.errors?.['required']">
+                        <span class="font-medium">Nickname</span> es requerido
+                    </div>
+                </div>
             </div>
             <div class="mt-6">
                 <div class="text-sm font-medium leading-none text-yellow-200"> Name </div>
-                <input aria-label="enter email adress" role="input" type="text" class="bg-gray-50 rounded-full text-xs font-medium leading-none text-gray-800 py-3 w-full pl-3 mt-2" />
+                <input formControlName="name_complete" aria-label="enter email adress" role="input" type="text" class="bg-gray-50 rounded-full text-xs font-medium leading-none text-gray-800 py-3 w-full pl-3 mt-2" />
+                <div *ngIf="name_complete?.invalid && (name_complete?.dirty || name_complete?.touched)" class=" text-center py-2 lg:px-4">
+                    <div class="p-2 text-sm text-red-700 bg-red-100 rounded-full dark:bg-red-200 dark:text-red-800" role="alert" *ngIf="name_complete?.errors?.['required']">
+                        <span class="font-medium">name</span> es requerido
+                    </div>
+                </div>
             </div>
             <div class="mt-6">
                 <div class="text-sm font-medium leading-none text-yellow-200"> Email Adress </div>
-                <input aria-label="enter email adress" role="input" type="email" class="bg-gray-50 rounded-full text-xs font-medium leading-none text-gray-800 py-3 w-full pl-3 mt-2" />
+                <input formControlName="email" aria-label="enter email adress" role="input" type="email" class="bg-gray-50 rounded-full text-xs font-medium leading-none text-gray-800 py-3 w-full pl-3 mt-2" />
+                <div *ngIf="email?.invalid && (email?.dirty || email?.touched)" class=" text-center py-2 lg:px-4">
+                    <div class="p-2 text-sm text-red-700 bg-red-100 rounded-full dark:bg-red-200 dark:text-red-800" role="alert" *ngIf="email?.errors?.['required']">
+                        <span class="font-medium">Email</span> es requerido
+                    </div>
+                    <div class="p-2 text-sm text-red-700 bg-red-100 rounded-full dark:bg-red-200 dark:text-red-800" role="alert" *ngIf="email?.errors?.['email'] && email?.errors?.['pattern']">
+                        <span class="font-medium">Email</span> debe tener un @ y .com
+                    </div>
+                </div>
             </div>
             <div class="mt-6 w-full">
                 <div class="text-sm font-medium leading-none text-yellow-200"> Password </div>
                 <div class="relative flex items-center justify-center">
-                    <input aria-label="enter Password" role="input" type="password" class="bg-gray-50 rounded-full text-xs font-medium leading-none text-gray-800 py-3 w-full pl-3 mt-2" />
+                    <input formControlName="password" aria-label="enter Password" role="input" type="password" class="bg-gray-50 rounded-full text-xs font-medium leading-none text-gray-800 py-3 w-full pl-3 mt-2" />
                     <div class="absolute right-0 mt-2 mr-3 cursor-pointer">
                         <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <path
@@ -35,6 +53,11 @@
                             fill="#71717A"
                         />
                     </svg>
+                    </div>
+                    <div *ngIf="password?.invalid && (password?.dirty || password?.touched)" class=" text-center py-2 lg:px-4">
+                        <div class="p-2 text-sm text-red-700 bg-red-100 rounded-full dark:bg-red-200 dark:text-red-800" role="alert" *ngIf="password?.errors?.['required']">
+                            <span class="font-medium">password</span> es requerido
+                        </div>
                     </div>
                 </div>
             </div>

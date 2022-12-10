@@ -5,6 +5,8 @@ import { RegisterComponent } from './components/register/register.component';
 import { AuthRoutingModule } from './auth-routing.module';
 import { ReactiveFormsModule } from '@angular/forms';
 import { MdbFormsModule } from 'mdb-angular-ui-kit/forms';
+import { HttpClientModule } from '@angular/common/http';
+import { CookieService } from 'ngx-cookie-service';
 
 
 
@@ -18,6 +20,9 @@ import { MdbFormsModule } from 'mdb-angular-ui-kit/forms';
     AuthRoutingModule,
     ReactiveFormsModule,
     MdbFormsModule,
-  ]
+    HttpClientModule
+  ],
+  providers:
+  [CookieService]
 })
 export class AuthModule { }

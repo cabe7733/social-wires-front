@@ -24,6 +24,8 @@ import { MdbScrollspyModule } from 'mdb-angular-ui-kit/scrollspy';
 import { MdbTabsModule } from 'mdb-angular-ui-kit/tabs';
 import { MdbTooltipModule } from 'mdb-angular-ui-kit/tooltip';
 import { MdbValidationModule } from 'mdb-angular-ui-kit/validation';
+import { HttpClientModule } from '@angular/common/http';
+import { ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -51,7 +53,9 @@ import { MdbValidationModule } from 'mdb-angular-ui-kit/validation';
     MdbTooltipModule,
     MdbValidationModule,
     CommonModule,
-    CoreRoutingModule
+    CoreRoutingModule,
+    HttpClientModule,
+    ReactiveFormsModule
   ]
 })
 export class CoreModule { }
