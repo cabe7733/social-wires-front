@@ -6,13 +6,45 @@
                 </h3>
             </div>
             <ul class="pr-12 xl:flex items-center h-full hidden ml-auto">
-                <li [routerLink]="'create-messages'" [routerLinkActive]="'border-b-2 border-white'" class="cursor-pointer h-full flex items-center hover:text-indigo-700 text-sm text-white tracking-normal">
-                    create messages</li>
-                <li [routerLink]="'my-messages'" [routerLinkActive]="'border-b-2 border-white'" class="cursor-pointer h-full flex items-center hover:text-indigo-700 text-sm text-white mx-10 tracking-normal">
-                    my messages</li>
-                <li [routerLink]="'all-messages'" [routerLinkActive]="'border-b-2 border-white'" class="cursor-pointer h-full flex items-center hover:text-indigo-700 text-sm text-white mr-10 tracking-normal">
-                    all messages</li>
+                <li [routerLink]="'create-messages'" [routerLinkActive]="'text-black bg-yellow-200'" class="cursor-pointer px-3 h-full flex items-center hover:text-indigo-700 text-sm text-white tracking-normal">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-6 h-6 mr-2">
+                        <path d="M21.731 2.269a2.625 2.625 0 00-3.712 0l-1.157 1.157 3.712 3.712 1.157-1.157a2.625 2.625 0 000-3.712zM19.513 8.199l-3.712-3.712-8.4 8.4a5.25 5.25 0 00-1.32 2.214l-.8 2.685a.75.75 0 00.933.933l2.685-.8a5.25 5.25 0 002.214-1.32l8.4-8.4z" />
+                        <path d="M5.25 5.25a3 3 0 00-3 3v10.5a3 3 0 003 3h10.5a3 3 0 003-3V13.5a.75.75 0 00-1.5 0v5.25a1.5 1.5 0 01-1.5 1.5H5.25a1.5 1.5 0 01-1.5-1.5V8.25a1.5 1.5 0 011.5-1.5h5.25a.75.75 0 000-1.5H5.25z" />
+                    </svg> Create Messages
+                </li>
+                <li [routerLink]="'my-messages'" [routerLinkActive]="'text-black bg-yellow-200'" class="cursor-pointer px-3 h-full flex items-center hover:text-indigo-700 text-sm text-white tracking-normal">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-6 h-6 mr-2">
+                        <path d="M3.478 2.405a.75.75 0 00-.926.94l2.432 7.905H13.5a.75.75 0 010 1.5H4.984l-2.432 7.905a.75.75 0 00.926.94 60.519 60.519 0 0018.445-8.986.75.75 0 000-1.218A60.517 60.517 0 003.478 2.405z" />
+                      </svg> My Messages
+                </li>
+                <li [routerLink]="'all-messages'" [routerLinkActive]="'text-black bg-yellow-200'" class="cursor-pointer px-3 h-full flex items-center hover:text-indigo-700 text-sm text-white tracking-normal">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-6 h-6 mr-1">
+                        <path d="M4.913 2.658c2.075-.27 4.19-.408 6.337-.408 2.147 0 4.262.139 6.337.408 1.922.25 3.291 1.861 3.405 3.727a4.403 4.403 0 00-1.032-.211 50.89 50.89 0 00-8.42 0c-2.358.196-4.04 2.19-4.04 4.434v4.286a4.47 4.47 0 002.433 3.984L7.28 21.53A.75.75 0 016 21v-4.03a48.527 48.527 0 01-1.087-.128C2.905 16.58 1.5 14.833 1.5 12.862V6.638c0-1.97 1.405-3.718 3.413-3.979z" />
+                        <path d="M15.75 7.5c-1.376 0-2.739.057-4.086.169C10.124 7.797 9 9.103 9 10.609v4.285c0 1.507 1.128 2.814 2.67 2.94 1.243.102 2.5.157 3.768.165l2.782 2.781a.75.75 0 001.28-.53v-2.39l.33-.026c1.542-.125 2.67-1.433 2.67-2.94v-4.286c0-1.505-1.125-2.811-2.664-2.94A49.392 49.392 0 0015.75 7.5z" />
+                      </svg> All Messages
+                </li>
             </ul>
+        </div>
+        <div class="h-full hidden xl:flex items-center justify-end">
+            <div class="h-full flex">
+                <div class="w-20 h-full flex items-center justify-center border-r border-l border-gray-700 cursor-pointer text-gray-400">
+                    <sup class="text-black rounded-full bg-yellow-200 p-2">2</sup>
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-6 h-6">
+                        <path fill-rule="evenodd" d="M12 2.25c-2.429 0-4.817.178-7.152.521C2.87 3.061 1.5 4.795 1.5 6.741v6.018c0 1.946 1.37 3.68 3.348 3.97.877.129 1.761.234 2.652.316V21a.75.75 0 001.28.53l4.184-4.183a.39.39 0 01.266-.112c2.006-.05 3.982-.22 5.922-.506 1.978-.29 3.348-2.023 3.348-3.97V6.741c0-1.947-1.37-3.68-3.348-3.97A49.145 49.145 0 0012 2.25zM8.25 8.625a1.125 1.125 0 100 2.25 1.125 1.125 0 000-2.25zm2.625 1.125a1.125 1.125 0 112.25 0 1.125 1.125 0 01-2.25 0zm4.875-1.125a1.125 1.125 0 100 2.25 1.125 1.125 0 000-2.25z" clip-rule="evenodd" />
+                      </svg>
+                </div>
+                <div class="w-20 h-full flex items-center justify-center border-r border-l border-gray-700 cursor-pointer text-gray-400">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-6 h-6">
+                        <path fill-rule="evenodd" d="M7.5 3.75A1.5 1.5 0 006 5.25v13.5a1.5 1.5 0 001.5 1.5h6a1.5 1.5 0 001.5-1.5V15a.75.75 0 011.5 0v3.75a3 3 0 01-3 3h-6a3 3 0 01-3-3V5.25a3 3 0 013-3h6a3 3 0 013 3V9A.75.75 0 0115 9V5.25a1.5 1.5 0 00-1.5-1.5h-6zm5.03 4.72a.75.75 0 010 1.06l-1.72 1.72h10.94a.75.75 0 010 1.5H10.81l1.72 1.72a.75.75 0 11-1.06 1.06l-3-3a.75.75 0 010-1.06l3-3a.75.75 0 011.06 0z" clip-rule="evenodd" />
+                    </svg>
+                </div>
+                <div class="flex items-center pl-8 relative text-white cursor-pointer" onclick="dropdownHandler(this)">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M17.982 18.725A7.488 7.488 0 0012 15.75a7.488 7.488 0 00-5.982 2.975m11.963 0a9 9 0 10-11.963 0m11.963 0A8.966 8.966 0 0112 21a8.966 8.966 0 01-5.982-2.275M15 9.75a3 3 0 11-6 0 3 3 0 016 0z" />
+                    </svg>
+                    <p class="text-white text-sm ml-2">Jane Doe</p>
+                </div>
+            </div>
         </div>
     </div>
 </nav>
@@ -20,27 +52,63 @@
 <nav>
     <div class="py-4 px-6 w-full flex xl:hidden justify-around items-center bg-gray-800 fixed top-0 z-40">
         <div class="w-24">
-            <h3 class="text-base text-yellow-200 font-bold tracking-normal leading-tight ml-3 hidden lg:block">Wires
+            <h3 class="text-base text-yellow-200 font-bold tracking-normal leading-tight ml-3 lg:block">Wires
             </h3>
         </div>
         <div>
             <div id="menu" class="text-white">
                 <div>
-                    <div (click)="isList = !isList" class="w-10 h-10 flex justify-content-center align-items-center shadow rounded-full hover:bg-yellow-200 hover:text-gray-900 text-sm font-medium leading-none text-gray-100 cursor-pointer" onclick="dropdownHandler()">
-                        <div class="flex justify-content-center align-items-center">
-                            <svg xmlns="http://www.w3.org/2000/svg" class="" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
-                                <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
+                    <div class="w-10 h-10 flex justify-content-center align-items-center shadow">
+                        <div class="flex justify-content-center align-items-center text-yellow-200 rounded-full hover:bg-yellow-200 hover:text-black p-2 mx-3" (click)="subList= !subList">
+                            <sup class="text-black rounded-full bg-yellow-200 p-2">2</sup>
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-6 h-6">
+                                <path fill-rule="evenodd" d="M12 2.25c-2.429 0-4.817.178-7.152.521C2.87 3.061 1.5 4.795 1.5 6.741v6.018c0 1.946 1.37 3.68 3.348 3.97.877.129 1.761.234 2.652.316V21a.75.75 0 001.28.53l4.184-4.183a.39.39 0 01.266-.112c2.006-.05 3.982-.22 5.922-.506 1.978-.29 3.348-2.023 3.348-3.97V6.741c0-1.947-1.37-3.68-3.348-3.97A49.145 49.145 0 0012 2.25zM8.25 8.625a1.125 1.125 0 100 2.25 1.125 1.125 0 000-2.25zm2.625 1.125a1.125 1.125 0 112.25 0 1.125 1.125 0 01-2.25 0zm4.875-1.125a1.125 1.125 0 100 2.25 1.125 1.125 0 000-2.25z" clip-rule="evenodd" />
                               </svg>
                         </div>
+                        <div class="flex justify-content-center p-2 align-items-center rounded-full hover:bg-yellow-200 hover:text-black text-sm font-medium leading-none text-gray-100 cursor-pointer" (click)="isList = !isList">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M3.9248 7.51782H19.6748M3.9248 12.3928H19.6748M3.9248 17.2678H19.6748" stroke="white" stroke-width="2" stroke-miterlimit="10" stroke-linecap="round"/>
+                            </svg>
+                        </div>
                     </div>
-                    <div *ngIf="isList" class="w-auto mt-3 mr-8 p-4 bg-gray-800 shadow rounded absolute" id="dropdown">
-                        <ul class="pr-12 xl:flex items-center h-full ml-auto">
-                            <li [routerLink]="'create-messages'" [routerLinkActive]="'border-b-2 border-yellow-200'" class="cursor-pointer h-full mt-2 flex items-center hover:text-yellow-500 text-sm  tracking-normal">
-                                create messages</li>
-                            <li [routerLink]="'my-messages'" [routerLinkActive]="'border-b-2 border-yellow-200'" class="cursor-pointer h-full mt-2 flex items-center hover:text-yellow-500 text-sm tracking-normal">
-                                my messages</li>
-                            <li [routerLink]="'all-messages'" [routerLinkActive]="'border-b-2 border-yellow-200'" class="cursor-pointer h-full mt-2 flex items-center hover:text-yellow-500 text-sm tracking-normal">
-                                all messages</li>
+                    <div *ngIf="subList" class="w-auto mt-3 bg-gray-200 shadow rounded absolute" id="dropdown" style="margin-left: -8em">
+                        <h3 class="text-black font-semibold font-xl py-2 px-4">recent post</h3>
+                        <div class="w-full h-auto dark:border-gray-700 border-t p-4 lg:border-t-0 lg:border-r lg:border-l rounded-lg dark:bg-gray-800 bg-gray-200">
+                            <h4 class="text-black font-semibold font-xl mb-1">title</h4>
+                            <p class="text-black"> Lorem ipsum dolor sit amet consectetur adipisicing elit. Excepturi quae iste, cum hic tempore velit libero labore nemo, aperiam facere, aspernatur repellat exercitationem quidem omnis quia praesentium enim distinctio a? Lorem,
+                                ipsum dolor sit amet</p>
+                        </div>
+                    </div>
+                    <div *ngIf="isList" class="w-auto mt-3 bg-gray-200 shadow rounded absolute" id="dropdown" style="margin-left: -8em">
+                        <ul class="xl:flex items-center h-full w-full ml-auto text-black">
+                            <li class="cursor-pointer h-full w-full pl-2 pr-24 py-3 mt-2 flex items-center text-sm tracking-normal">
+                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+                                    <path stroke-linecap="round" stroke-linejoin="round" d="M17.982 18.725A7.488 7.488 0 0012 15.75a7.488 7.488 0 00-5.982 2.975m11.963 0a9 9 0 10-11.963 0m11.963 0A8.966 8.966 0 0112 21a8.966 8.966 0 01-5.982-2.275M15 9.75a3 3 0 11-6 0 3 3 0 016 0z" />
+                                </svg>
+                                <h4 class="text-xl ml-2">Jane Doe</h4>
+                            </li>
+                            <li [routerLink]="'create-messages'" [routerLinkActive]="'text-black bg-yellow-200'" class="cursor-pointer h-full w-full pl-2 pr-24 py-3 mt-2 flex items-center text-sm  tracking-normal">
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-6 h-6 mr-2">
+                                    <path d="M21.731 2.269a2.625 2.625 0 00-3.712 0l-1.157 1.157 3.712 3.712 1.157-1.157a2.625 2.625 0 000-3.712zM19.513 8.199l-3.712-3.712-8.4 8.4a5.25 5.25 0 00-1.32 2.214l-.8 2.685a.75.75 0 00.933.933l2.685-.8a5.25 5.25 0 002.214-1.32l8.4-8.4z" />
+                                    <path d="M5.25 5.25a3 3 0 00-3 3v10.5a3 3 0 003 3h10.5a3 3 0 003-3V13.5a.75.75 0 00-1.5 0v5.25a1.5 1.5 0 01-1.5 1.5H5.25a1.5 1.5 0 01-1.5-1.5V8.25a1.5 1.5 0 011.5-1.5h5.25a.75.75 0 000-1.5H5.25z" />
+                                  </svg> create messages
+                            </li>
+                            <li [routerLink]="'my-messages'" [routerLinkActive]="'text-black bg-yellow-200'" class="cursor-pointer h-full w-full pl-2 pr-24 py-3 mt-2 flex items-center text-sm  tracking-normal">
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-6 h-6 mr-2">
+                                    <path d="M3.478 2.405a.75.75 0 00-.926.94l2.432 7.905H13.5a.75.75 0 010 1.5H4.984l-2.432 7.905a.75.75 0 00.926.94 60.519 60.519 0 0018.445-8.986.75.75 0 000-1.218A60.517 60.517 0 003.478 2.405z" />
+                                  </svg> my messages
+                            </li>
+                            <li [routerLink]="'all-messages'" [routerLinkActive]="'text-black bg-yellow-200'" class="cursor-pointer h-full w-full pl-2 pr-24 py-3 mt-2 flex items-center text-sm  tracking-normal">
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-6 h-6 mr-2">
+                                    <path d="M4.913 2.658c2.075-.27 4.19-.408 6.337-.408 2.147 0 4.262.139 6.337.408 1.922.25 3.291 1.861 3.405 3.727a4.403 4.403 0 00-1.032-.211 50.89 50.89 0 00-8.42 0c-2.358.196-4.04 2.19-4.04 4.434v4.286a4.47 4.47 0 002.433 3.984L7.28 21.53A.75.75 0 016 21v-4.03a48.527 48.527 0 01-1.087-.128C2.905 16.58 1.5 14.833 1.5 12.862V6.638c0-1.97 1.405-3.718 3.413-3.979z" />
+                                    <path d="M15.75 7.5c-1.376 0-2.739.057-4.086.169C10.124 7.797 9 9.103 9 10.609v4.285c0 1.507 1.128 2.814 2.67 2.94 1.243.102 2.5.157 3.768.165l2.782 2.781a.75.75 0 001.28-.53v-2.39l.33-.026c1.542-.125 2.67-1.433 2.67-2.94v-4.286c0-1.505-1.125-2.811-2.664-2.94A49.392 49.392 0 0015.75 7.5z" />
+                                  </svg> all messages
+                            </li>
+                            <li class="cursor-pointer h-full w-full pl-2 pr-24 py-3 mt-2 flex items-center text-sm  tracking-normal">
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-6 h-6 mr-2">
+                                    <path fill-rule="evenodd" d="M7.5 3.75A1.5 1.5 0 006 5.25v13.5a1.5 1.5 0 001.5 1.5h6a1.5 1.5 0 001.5-1.5V15a.75.75 0 011.5 0v3.75a3 3 0 01-3 3h-6a3 3 0 01-3-3V5.25a3 3 0 013-3h6a3 3 0 013 3V9A.75.75 0 0115 9V5.25a1.5 1.5 0 00-1.5-1.5h-6zm5.03 4.72a.75.75 0 010 1.06l-1.72 1.72h10.94a.75.75 0 010 1.5H10.81l1.72 1.72a.75.75 0 11-1.06 1.06l-3-3a.75.75 0 010-1.06l3-3a.75.75 0 011.06 0z" clip-rule="evenodd" />
+                                  </svg> Logout
+                            </li>
                         </ul>
                     </div>
                 </div>

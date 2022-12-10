@@ -7,9 +7,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HeaderComponent implements OnInit {
   isList: boolean;
-  isMenu: boolean = false;
-  isSearch: boolean = false;
-  subList = 3;
+  subList: boolean;
   constructor() { }
 
   ngOnInit(): void {
