@@ -4,10 +4,11 @@ import { AllMessagesComponent } from './components/all-messages/all-messages.com
 import { CreateMessagesComponent } from './components/create-messages/create-messages.component';
 import { MyMessagesComponent } from './components/my-messages/my-messages.component';
 import { CoreComponent } from './core.component';
+import { SessionGuard } from './guards/session.guard';
 
 const routes: Routes = [
   {
-    path:'core', component: CoreComponent, children:[
+    path:'core', component: CoreComponent,canActivate:[SessionGuard], children:[
       {
         path: 'create-messages',
         component: CreateMessagesComponent
